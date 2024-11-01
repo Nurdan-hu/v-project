@@ -25,4 +25,3 @@ def anamenu():
     if secim == "4" :
         moduller_01.sıcaklıkhes.sıcaklık()  
 anamenu()
-input()
