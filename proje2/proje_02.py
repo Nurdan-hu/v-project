@@ -18,13 +18,16 @@ def telrehberi():
     elif secim == "2":
         adsoyad = (input("Ad-Soyad Giriniz:"))
         telno= (input("Telefon Numarasını Giriniz:"))
-
-        dosya = open("rehber.txt","a",encoding="utf-8")
+        dosya = open("moduller_02.rehber.txt","a",encoding="utf-8")
         dosya.write ( "\n" +adsoyad + "-" + telno )
         print("Kayıt işlemi başarıyla gerçekleşmiştir.")
     elif secim == "3":
         pass
     elif secim == "4":
-        pass
+        print("Düzenlemek istediğiniz ismi giriniz:")
+        yeniisim=print("Yeni isimi giriniz:")
+        yenino=print("Yeni numarayı giriniz:")
+        dosya = open("rehber.txt","a",encoding="utf-8")
+        dosya.write ( "\n" , yeniisim , "-" , yenino )
 telrehberi()
 input()
