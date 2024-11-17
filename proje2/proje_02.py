@@ -6,15 +6,12 @@ def kisi_listele():
                   print(c,b)
         except:
             print("Dosya bulunamadı")
-                
-            
-            
-            
+                            
 def kisi_ekle():
         adsoyad = (input("Ad-Soyad Giriniz:"))
         telno= (input("Telefon Numarasını Giriniz:"))
         dosya = open("rehber.txt","a",encoding="utf-8")
-        dosya.write (adsoyad + "-" + telno )
+        dosya.write ("\n"+adsoyad + "-" + telno )
         print("Kayıt işlemi başarıyla gerçekleşmiştir.")
         
     
@@ -22,7 +19,7 @@ def rehber_sil():
     print("Mevcut kayıtlar")
     kisi_listele()
     silinecek = int(input ("Hangi kayıt silinecek(numarasını girin):"))
-    dosya = open("rehber.txt","r+",encoding="utf-8")
+    dosya = open("rehber.txt","r+")
     okunan = dosya.readlines()
     silinecekKayit = okunan[silinecek]
     print("Silinecek kayıt : ", silinecekKayit)
@@ -37,9 +34,9 @@ def kisi_düzenleme():
     print("Mevcut kayıtlar")
     kisi_listele()
     duzeltilecek = int(input ("Düzeltilecek kayıtın kaçıncı olduğunu giriniz:"))
-    dosya = open("rehber.txt","r+",encoding="utf-8")    
+    dosya = open("rehber.txt","r+")    
     okunan = dosya.readlines()
-    duzeltilecekKayit = okunan[duzeltilecek]
+    duzeltilecekKayit = okunan[duzeltilecek-1]
     print("Düzeltilecek kayıt : ", duzeltilecekKayit)
     dosya.close()
 
