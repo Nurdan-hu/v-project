@@ -1,7 +1,12 @@
 def kisi_listele():
-            kisiler = open(f"rehber.txt","r",encoding="utf-8")
-            for c, b in enumerate(kisiler):
+        try:
+            dosya = open("rehber.txt","r")
+            kisiler= dosya.readlines()
+            for c, b in enumerate(kisiler, start= 1):
                   print(c,b)
+        except:
+            print("Dosya bulunamadı")
+                
             
             
             
@@ -19,7 +24,7 @@ def rehber_sil():
     silinecek = int(input ("Hangi kayıt silinecek(numarasını girin):"))
     dosya = open("rehber.txt","r+",encoding="utf-8")
     okunan = dosya.readlines()
-    silinecekKayit = okunan[silinecek-1]
+    silinecekKayit = okunan[silinecek]
     print("Silinecek kayıt : ", silinecekKayit)
     dosya.close()
 
@@ -31,10 +36,10 @@ def rehber_sil():
 def kisi_düzenleme():
     print("Mevcut kayıtlar")
     kisi_listele()
-    duzeltilecek = int(input ("Hangi kayıt duzeltilecek(numarasını girin):"))
+    duzeltilecek = int(input ("Düzeltilecek kayıtın kaçıncı olduğunu giriniz:"))
     dosya = open("rehber.txt","r+",encoding="utf-8")    
     okunan = dosya.readlines()
-    # duzeltilecekKayit = okunan[duzeltilecek-1]
+    duzeltilecekKayit = okunan[duzeltilecek]
     print("Düzeltilecek kayıt : ", duzeltilecekKayit)
     dosya.close()
 
