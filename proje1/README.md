@@ -4,3 +4,4 @@ As you see, you can make calculations by selecting 1.<br>
 You can take a look at the calender and plan your year by selecting 2.<br>
 You can calculate your BMI and learn you're healthy or not by selecting 3.<br>
 You can make temperature calculations by selecting 4.<br>
+You can see some geometric shapes by selecting 5.
